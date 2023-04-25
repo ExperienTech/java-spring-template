@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: "org.postgresql.Driver"
+    username: experientech_user
+    password: WJvlcsKMGdTDl0lWAwclEX6LFtyfQwfg
+    url: jdbc:postgresql://localhost:5435/experientech
+  flyway:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+server:
+  port: 9090
+springdoc:
+  swagger-ui:
+    path: /docs

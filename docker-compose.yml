@@ -1,0 +1,21 @@
+version: "3.3"
+services:
+  postgres:
+    image: postgres:15.1-alpine
+    container_name: experientech_postgres
+    environment:
+      - POSTGRES_USER=experientech_user
+      - POSTGRES_PASSWORD=WJvlcsKMGdTDl0lWAwclEX6LFtyfQwfg
+      - POSTGRES_DB=experientech
+      - TZ=America/Sao_Paulo
+    networks:
+      - experientech_nt
+    ports:
+      - "5435:5432"
+    volumes:
+      - experientech_postgres_vm:/var/lib/postgresql/data
+volumes:
+  experientech_postgres_vm:
+networks:
+  experientech_nt:
+    external: true
